@@ -13,3 +13,15 @@ variable "AMIS" {
         eu-west-1 = "ami-096800910c1b781ba"
     }
 }
+
+variable "PATH_TO_PUBLIC_KEY" {
+    default = "aws_key.pub"
+}
+
+variable "PATH_TO_PRIVATE_KEY" {
+    default = "aws_key"
+}
+
+variable "INSTANCE_USERNAME" {
+    default = "ubuntu"
+}
