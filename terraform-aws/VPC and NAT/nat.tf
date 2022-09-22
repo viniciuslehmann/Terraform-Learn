@@ -25,6 +25,7 @@ resource "aws_route_table" "main-private" {
   }
 }
 
+# Associando a rota padrão às sub-redes privadas
 resource "aws_route_table_association" "main-private-1-route-association" {
   subnet_id      = aws_subnet.main-private-1.id
   route_table_id = aws_route_table.main-private.id
