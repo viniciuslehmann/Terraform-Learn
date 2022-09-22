@@ -1,6 +1,16 @@
-# Terraform-Learn
+# Processo de Aprendizado em Terraform
 
 Reposítorio de arquivos criados durante meu aprendizado da tecnologia da Hashicorp, <b>Terraform</b>.
+
+# Terraform Basics
+
+Contém arquivos criados durante o aprendizado dos conceitos básicos do Terraform:
+
+<ul>
+<li>Variáveis e Outputs</li>
+<li>Data Source</li>
+<li>Providers</li>
+</ul>
 
 # Terraform AWS
 
