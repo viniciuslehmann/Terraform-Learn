@@ -1,5 +1,7 @@
 # Terraform-Learn
 
+Reposítorio de arquivos criados durante meu aprendizado da tecnologia da Hashicorp, <b>Terraform</b>.
+
 # VPC e NAT
 
 O projeto abaixo defini a criação de 6 sub-redes, sendo 3 sub-redes públicas e 3 sub-redes privadas em 3 zonas de disponibilidades diferentes dentro da mesma região.
