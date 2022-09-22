@@ -1,5 +1,5 @@
 resource "aws_instance" "example" {
-  ami = lookup(var.AMIS, var.AWS_REGION)
+  ami           = lookup(var.AMIS, var.AWS_REGION)
   instance_type = "t2.micro"
 
   provisioner "local-exec" {
@@ -8,21 +8,21 @@ resource "aws_instance" "example" {
 }
 
 output "public_ip" {
-  value= aws_instance.example.public_ip
+  value = aws_instance.example.public_ip
 }
 
 output "public_dns" {
-    value = aws_instance.example.public_dns
+  value = aws_instance.example.public_dns
 }
 
 output "az_zone" {
-    value = aws_instance.example.availability_zone
+  value = aws_instance.example.availability_zone
 }
 
 output "host_id" {
-    value = aws_instance.example.host_id
+  value = aws_instance.example.host_id
 }
 
 output "vpc_secgroup" {
-    value = aws_instance.example.vpc_security_group_ids
+  value = aws_instance.example.vpc_security_group_ids
 }
