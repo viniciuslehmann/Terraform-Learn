@@ -13,23 +13,23 @@ resource "aws_instance" "example" {
   # Chave pública de acesso à instância
   key_name = aws_key_pair.mykey.key_name
 
-  # Script executado na criação da instancia
-  user_data = "#!/bin/bash\nwget http://swupdate.openvpn.org/as/openvpn-as-2.1.2-Ubuntu14.amd_64.deb\ndpkg -i openvpn-as-2.1.2-Ubuntu14.amd_64.deb"
+  # Script de inicialização
+  user_data = data.template_cloudinit_config.cloudinit-example.rendered
 }
 
 # Criação de um volume EBS
 resource "aws_ebs_volume" "ebs-volume-1" {
   availability_zone = "${var.AWS_REGION}a"
-  size = 20
-  type = "gp2"
+  size              = 20
+  type              = "gp2"
   tags = {
     "Name" = "extra volume data"
   }
-} 
+}
 
 # Acoplar volume à uma instância
 resource "aws_volume_attachment" "ebs-volume-1-attach" {
-  device_name = "/dev/xvdh"
-  volume_id = "${aws_ebs_volume.ebs-volume-1.id}"
-  instance_id = "${aws_instance.example.id}"
+  device_name = var.INSTANCE_DEVICE_NAME
+  volume_id   = aws_ebs_volume.ebs-volume-1.id
+  instance_id = aws_instance.example.id
 }
