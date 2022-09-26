@@ -12,6 +12,9 @@ resource "aws_instance" "example" {
 
   # Chave pública de acesso à instância
   key_name = aws_key_pair.mykey.key_name
+
+  # Script executado na criação da instancia
+  user_data = "#!/bin/bash\nwget http://swupdate.openvpn.org/as/openvpn-as-2.1.2-Ubuntu14.amd_64.deb\ndpkg -i openvpn-as-2.1.2-Ubuntu14.amd_64.deb"
 }
 
 # Criação de um volume EBS
