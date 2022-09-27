@@ -15,6 +15,9 @@ resource "aws_instance" "example" {
 
   # Script de inicialização
   user_data = data.template_cloudinit_config.cloudinit-example.rendered
+
+  # IAM Role
+  iam_instance_profile = aws_iam_instance_profile.s3-mybucket-role-instanceprofile.name
 }
 
 # Criação de um volume EBS
