@@ -32,6 +32,7 @@ Inclusões no projeto:
     <li>NAT Gateway na sub-rede main-public-1</li>
     <li>Instância EC2 com dois volumes EBS</li>
     <li>Banco de dados RDS na sub-rede main-private-1 e regras de security group para acesso</li>
+    <li>Scripts de Inicialização com Cloud Init e Shell Script para atualização do sistema e inclusão do volume EBS no arquivo FSTAB</li>
 </ul>
 
 <img src="terraform-aws\VPC and NAT\diagrama AWS VPC-v2.png" alt="Alt text" title="Optional title">
