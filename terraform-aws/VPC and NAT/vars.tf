@@ -1,5 +1,7 @@
 variable "AWS_ACCESS_KEY" {}
 variable "AWS_SECRET_KEY" {}
+variable "RDS_DB_PASSWORD" {}
+variable "RDS_DB_USERNAME" {}
 
 variable "AWS_REGION" {
   default = "eu-west-1"
