@@ -24,3 +24,14 @@ Projeto criado para fins de aprendizado da tecnologia Terraform.</p>
 
 
 <img src="terraform-aws/VPC and NAT/diagram-vpc.png" alt="Alt text" title="Optional title">
+
+<h4>26/09/2022</h3>
+
+Inclusões no projeto:
+<ul>
+    <li>NAT Gateway na sub-rede main-public-1</li>
+    <li>Instância EC2 com dois volumes EBS</li>
+    <li>Banco de dados RDS na sub-rede main-private-1 e regras de security group para acesso</li>
+</ul>
+
+<img src="terraform-aws\VPC and NAT\diagrama AWS VPC-v2.png" alt="Alt text" title="Optional title">
