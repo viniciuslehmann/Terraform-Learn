@@ -36,3 +36,11 @@ Inclusões no projeto:
 </ul>
 
 <img src="terraform-aws\VPC and NAT\diagrama AWS VPC-v2.png" alt="Alt text" title="Optional title">
+
+
+<h2>Terraform + Jenkins + Packer</h2>
+
+<p>Projeto utilizando AWS como Cloud Provider, Jenkins e Packer para automatização e criação de AMI's.
+
+Implementação em andamento!</p>
+<img src="terraform-aws\Jenkins-Packer\jenkins-packer.png" alt="Alt text" title="Optional title">
